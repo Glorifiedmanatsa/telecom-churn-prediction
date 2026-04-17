@@ -1,9 +1,10 @@
+import os
 from flask import Flask, render_template, request
 import joblib
 import numpy as np
 
 app = Flask(__name__)
-
+app.secret_key = os.environ.get("SECRET_KEY", "dev-secret-key")
 # Load trained model
 model = joblib.load("models/churn_model.pkl")
 
