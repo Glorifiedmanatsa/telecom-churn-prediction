@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Telecom Churn Predictor</title>
+    <style>
+body {
+    font-family: Arial;
+    margin: 40px;
+    background-color: #f4f4f4;
+}
+form {
+    background: white;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+}
+button {
+    background: blue;
+    color: white;
+    padding: 10px;
+    border: none;
+}
+</style>
+</head>
+<body>
+
+<h2>📊 Telecom Customer Retention System</h2>
+
+<form action="/predict" method="post">
+
+    <label>Tenure (Months):</label><br>
+    <input type="number" name="tenure" required><br><br>
+
+    <label>Monthly Charges:</label><br>
+    <input type="number" name="MonthlyCharges" required><br><br>
+
+    <label>Total Charges:</label><br>
+    <input type="number" name="TotalCharges" required><br><br>
+
+    <label>Contract Type:</label><br>
+    <select name="Contract">
+        <option value="0">Month-to-Month</option>
+        <option value="1">One Year</option>
+        <option value="2">Two Year</option>
+    </select><br><br>
+
+    <label>Internet Service:</label><br>
+    <select name="InternetService">
+        <option value="0">DSL</option>
+        <option value="1">Fiber Optic</option>
+        <option value="2">No Internet</option>
+    </select><br><br>
+
+    <label>Online Security:</label><br>
+    <select name="OnlineSecurity">
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+    </select><br><br>
+
+    <label>Tech Support:</label><br>
+    <select name="TechSupport">
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+    </select><br><br>
+
+    <label>Payment Method:</label><br>
+    <select name="PaymentMethod">
+        <option value="0">Electronic Check</option>
+        <option value="1">Mailed Check</option>
+        <option value="2">Bank Transfer</option>
+        <option value="3">Credit Card</option>
+    </select><br><br>
+
+    <button type="submit">Predict Churn</button>
+
+</form>
+
+</body>
+</html>

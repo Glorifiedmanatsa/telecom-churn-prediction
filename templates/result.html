@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+</head>
+<body>
+
+<h2 style="color: {{ color }};">{{ prediction }}</h2>
+
+<p>Churn Probability: {{ probability }}%</p>
+
+<div style="background:#eee; width:100%;">
+  <div style="width:{{ probability }}%; background:{{ color }}; color:white;">
+    {{ probability }}%
+  </div>
+</div>
+
+<h3>Recommended Actions:</h3>
+<ul>
+  <li>Offer discounts</li>
+  <li>Improve customer engagement</li>
+  <li>Provide better support</li>
+</ul>
+
+</body>
+</html>
